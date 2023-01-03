@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: account
+  profiles:
+    active: local
+  config:
+    import: optional:configserver:http://localhost:8001
+management:
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+info:
+  app:
+    name: Account Service
+    description: Account microservice
+    version: 1.0.0
+endpoints:
+  shutdown:
+    enabled: true
+
